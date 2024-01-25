@@ -1,12 +1,20 @@
-DROP TABLE IF EXISTS tasks;
+DROP TABLE IF EXISTS userGarage;
+DROP TABLE IF EXISTS vehicles;
 
-CREATE TABLE tasks (
-  id SERIAL,
-  description TEXT
+CREATE TABLE userGarage (
+  id serial PRIMARY KEY,
+  firstName varchar(20),
+  lastName varchar(30),
+  vehicle_id integer NOT NULL, -- NOT SURE HOW TO IMPLEMENT THIS ONE YET
+  FOREIGN KEY (vehicle_id) REFERENCES vehicles (id) ON DELETE CASCADE
 );
 
-INSERT INTO tasks(description) VALUES('Do the dishes');
-INSERT INTO tasks(description) VALUES('Walk the dog');
-INSERT INTO tasks(description) VALUES('Sweep the floor');
-INSERT INTO tasks(description) VALUES('Do your homework');
-INSERT INTO tasks(description) VALUES('Beat Elden Ring');
+CREATE TABLE vehicles (
+  id serial PRIMARY KEY,
+  make varchar(20),
+  model varchar(20),
+  trim varchar(20),
+  color varchar(20),
+  year integer
+);
+
