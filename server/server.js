@@ -6,8 +6,19 @@ dotenv.config({ path: "../.env" });
 
 const { PORT, DATABASE_URL } = process.env;
 
-const client = new pg.Client({
-  connectionString: DATABASE_URL,
+// const client = new pg.Client({ // this is for a deployed server
+//   connectionString: DATABASE_URL,
+// });
+
+const { Pool } = pg;
+const expressPort = 8005;
+
+const client  = new Pool({ // this is for local host
+  user: 'matthewslonoff',
+  password: 'slonoff4',
+  host: 'localhost',
+  database: 'vehicleGarage',
+  port: 5432,
 });
 
 await client.connect();
@@ -15,28 +26,19 @@ await client.connect();
 const app = express();
 
 app.use(express.json());
-
-app.get("/api/tasks", (req, res) => {
-  client.query("SELECT * FROM tasks").then((result) => {
+// get all vehicles in vehicles table
+app.get("/api/vehicles", (req, res) => {
+  client.query("SELECT * FROM vehicles").then((result) => {
     res.send(result.rows);
   });
 });
 // ***************** routes that wil be needed ************
+ 
 
-// post request for a user to create a userGarage for themself - they'll need to supply their firstName and lastName
-// they will start with no vehicles in their garage
+// app.listen(PORT, () => {
+//   console.log(`Listening on port ${PORT}`); // to listen on deplyed server
+// });
 
-
-
-// post request to add a user's created vehicle to the userGarage table
-
-// delete request to delete a user's created vehicle from the userGarage table
-
-// post request to add a user's created vehicle to their garage,
-// should post vehicle to userGarage by using the vehicle id number,
-// (i.e. INSERT INTO user's userGarage vehicle_id ___) 
-// 
-
-app.listen(PORT, () => {
-  console.log(`Listening on port ${PORT}`);
+app.listen(expressPort, () => {
+  console.log(`Listening on port ${expressPort}`); // to listen on local host
 });
