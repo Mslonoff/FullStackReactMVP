@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 
-const Makes = ({ vehicles, onClick }) => {
+const Makes = ({ vehicles }) => {
     const [makesButton, setMakesButton] = useState(false);
   
     return (
