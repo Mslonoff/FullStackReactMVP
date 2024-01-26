@@ -13,7 +13,7 @@ const { PORT, DATABASE_URL } = process.env;
 
 const { Pool } = pg;
 const app = express();
-const expressPort = 8005;
+// const expressPort = process.env.PORT;
 app.use(express.json());
 
 const client  = new Pool({ // this is for local host
@@ -27,6 +27,7 @@ const client  = new Pool({ // this is for local host
 // get all vehicles in vehicles table
 app.get("/api/vehicles", (req, res) => { // good to go
   client.query("SELECT * FROM vehicles").then((result) => {
+    console.log('hi there tasks executed');
     res.send(result.rows);
   });
 });
@@ -54,6 +55,6 @@ app.get('/api/vehicles/:id', (req, res) => { // good to go
 //   console.log(`Listening on port ${PORT}`); // to listen on deplyed server
 // });
 
-app.listen(expressPort, () => {
-  console.log(`Listening on port ${expressPort}`); // to listen on local host
+app.listen(8005, () => {
+  console.log(`Listening on port ${8005}`); // to listen on local host
 });

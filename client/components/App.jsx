@@ -4,6 +4,7 @@ const App = () => {
   const [vehicles, setVehicles] = useState([]);
 
   useEffect(() => {
+    console.log('use Effect for vehicles ran');
     fetch("/api/vehicles") // changed from tasks - testing commit
       .then((res) => res.json())
       .then((vehicles) => {
@@ -11,13 +12,18 @@ const App = () => {
       });
   }, []);
 
+
+  // useEffect(function, dependency array)
+
   return (
     <main>
-      {tasks.map((vehicle) => (
+      
+      {vehicles.map((vehicle) => (
         <span className="vehicle" key={vehicle.id}>
-          {vehicle.description}
+          {vehicle}
         </span>
       ))}
+      {console.log('component tasks rendered')}
     </main>
   );
 };
