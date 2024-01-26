@@ -1,4 +1,11 @@
 import React, { useEffect, useState } from "react";
+import Vehicles from './Vehicles.jsx';
+import Makes from './Makes.jsx';
+import Models from './Models.jsx';
+import Colors from './Colors.jsx';
+import Years from './Years.jsx';
+import Trims from './Trims.jsx';
+
 
 const App = () => {
   const [vehicles, setVehicles] = useState([]);
@@ -16,15 +23,16 @@ const App = () => {
   // useEffect(function, dependency array)
 
   return (
-    <main>
-      
-      {vehicles.map((vehicle) => (
-        <span className="vehicle" key={vehicle.id}>
-          {vehicle}
-        </span>
-      ))}
+    <>
+    {/* How can I get all this down here to be a separate component called Vehicles.jsx?? */}
+    <Vehicles vehicles={vehicles}/>
+    <Makes vehicles={vehicles}/>
       {console.log('component tasks rendered')}
-    </main>
+      <Models vehicles={vehicles}/>
+      <Colors vehicles={vehicles}/>
+      <Years vehicles={vehicles}/>
+      <Trims vehicles={vehicles}/>
+    </>
   );
 };
 
