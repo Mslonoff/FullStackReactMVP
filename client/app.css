@@ -22,3 +22,8 @@ body {
 .task > * + * {
   margin-left: 4px;
 }
+
+#makesButton {
+  width: 3em;
+  height: 3em;
+}
