@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Vehicles from './Vehicles.jsx';
+// import Vehicles from './Vehicles.jsx';
 import Makes from './Makes.jsx';
 import Models from './Models.jsx';
 import Colors from './Colors.jsx';
@@ -25,7 +25,7 @@ const App = () => {
   return (
     <>
     {/* How can I get all this down here to be a separate component called Vehicles.jsx?? */}
-    <Vehicles vehicles={vehicles}/>
+    {/* <Vehicles vehicles={vehicles}/> */}
     
     <Makes vehicles={vehicles}/>
       {console.log('component tasks rendered')}
