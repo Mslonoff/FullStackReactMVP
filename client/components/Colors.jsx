@@ -8,13 +8,11 @@ const Colors = ({vehicles}) => {
     <button id="colorsButton" onClick={() => setColorsButton(true)}>
         Show Colors</button>
     {colorsButton ? (
-        <div>
-          {vehicles.map((vehicle) => (
-            <span className="color" key={vehicle.id}>
-              {vehicle.color}
-            </span>
-          ))}
-          </div>
+        <>
+        <button id="Black">Black</button>
+        <button id="Gray">Gray</button>
+        <button id="Red">Red</button>
+          </>
     ) : null}
 </div>
 )};

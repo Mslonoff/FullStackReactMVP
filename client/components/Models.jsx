@@ -7,16 +7,14 @@ const Models = ({vehicles}) => {
 <div id="models">
     <button id="modelsButton" onClick={() => setModelsButton(true)}>Show Models</button>
         {modelsButton ? (
-            <div>
-              {vehicles.map((vehicle) => (
-            <span className="model" key={vehicle.id}>
-              {vehicle.model}
-              {/* {console.log('vehicles in span:', {vehicles})} */}
-            </span>
-          ))}
-          </div>
+            <>
+        <button id="availableModels">Tacoma</button>
+        <button id="availableModels">Tundra</button>
+        <button id="availableModels">4Runner</button>
+        <button id="availableModels">Prius</button>
+        </>
         ) : null}
-</div>
+        </div>
 )}
 
 export default Models;

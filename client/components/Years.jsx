@@ -10,13 +10,10 @@ const Years = ({vehicles}) => {
     </button>
 
     {yearsButton ? (
-        <div>
-        {vehicles.map((vehicle) => (
-            <span className="make" key={vehicle.id}>
-              {vehicle.year}
-            </span>
-          ))}
-          </div>
+        <>
+        <button id="2023">2023</button>
+        <button id="2024">2024</button>
+        </>
     ) : null}
 </div>
 )};

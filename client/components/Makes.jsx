@@ -11,15 +11,12 @@ const Makes = ({ vehicles }) => {
         </button>
   
         {makesButton ? (
-          <div>
-            {vehicles.map((vehicle) => (
-              <span className="make" key={vehicle.id}>
-                {vehicle.make}
-              </span>
-            ))}
-          </div>
-        ) : null}
+          <button id="toyota">Toyota</button>
+            ) : null}
       </div>
     )};
   
   export default Makes;
+
+
+  // now it's time to convert the show makes button so that it shows a single 'Tacoma' button that can be clicked
