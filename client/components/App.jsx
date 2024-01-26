@@ -1,21 +1,21 @@
 import React, { useEffect, useState } from "react";
 
 const App = () => {
-  const [tasks, setTasks] = useState([]);
+  const [vehicles, setVehicles] = useState([]);
 
   useEffect(() => {
     fetch("/api/vehicles") // changed from tasks - testing commit
       .then((res) => res.json())
-      .then((tasks) => {
-        setTasks(tasks);
+      .then((vehicles) => {
+        setVehicles(vehicles);
       });
   }, []);
 
   return (
     <main>
-      {tasks.map((task) => (
-        <span className="task" key={task.id}>
-          {task.description}
+      {tasks.map((vehicle) => (
+        <span className="vehicle" key={vehicle.id}>
+          {vehicle.description}
         </span>
       ))}
     </main>
