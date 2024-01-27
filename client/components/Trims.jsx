@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 
-const Trims = ({setAvailableModels, handleModelClick, tacomaButton, tundraButton, fourRunnerButton, priusButton, availableModels, modelsButton, setModelsButton, vehicles, trimsButton, setTrimsButton}) => {
+const Trims = ({setAvailableModels, handleModelClick, tacomaButton, tundraButton, fourRunnerButton, setFourRunnerButton, priusButton, setPriusButton, availableModels, modelsButton, setModelsButton, vehicles, trimsButton, setTrimsButton}) => {
   console.log('trimsButton in trims?', trimsButton);
-  console.log('tacomaButton in trims ------', tacomaButton); // TACOMA BUTTON IS UNDEFINED!!!! WHY????
+  console.log('fourRunnerButton in trims ------', fourRunnerButton);
   if (availableModels) {
     return (
 <div id="trims">
@@ -20,7 +20,7 @@ const Trims = ({setAvailableModels, handleModelClick, tacomaButton, tundraButton
           ))}
           </div>
     ) : null}
-     {/* {trimsButton && tundraButton ? (
+     {trimsButton && tundraButton ? (
       <div>
         {vehicles.map((vehicle) => (
             <span className="trim" key={vehicle.id}>
@@ -46,7 +46,7 @@ const Trims = ({setAvailableModels, handleModelClick, tacomaButton, tundraButton
             </span>
           ))}
           </div>
-    ) : null} */}
+    ) : null}
 </div>
 )}}
 

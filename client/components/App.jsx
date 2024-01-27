@@ -15,7 +15,9 @@ const App = () => {
   const [modelsButton, setModelsButton] = useState(false);
   const [availableModels, setAvailableModels] = useState(false);
   const [tacomaButton, setTacomaButton] = useState(false);
-  // const [tacomaButton, setTacomaButton] = useState(false);
+  const [tundraButton, setTundraButton] = useState(false);
+  const [fourRunnerButton, setFourRunnerButton] = useState(false);
+  const [priusButton, setPriusButton] = useState(false);
 
   useEffect(() => {
     // console.log('use Effect for vehicles ran');
@@ -31,10 +33,11 @@ const App = () => {
 
   return (
     <>
+    {/* THIS IS PROP DRILLING; YOU NEVER DRILL UPWARD */}
     {/* <Vehicles vehicles={vehicles} a={1} /> */}
-    <Makes makes={vehicles.make} vehicles={vehicles} makesButton={makesButton} setMakesButton={setMakesButton}/> // THIS IS PROP DRILLING; YOU NEVER DRILL UPWARD
-    <Models makes={vehicles.model} tacomaButton={tacomaButton} setTacomaButton={setTacomaButton} vehicles={vehicles} makesButton={makesButton} setMakesButton={setMakesButton} availableModels={availableModels} setAvailableModels={setAvailableModels}/>
-    <Trims makes={vehicles.trim} tacomaButton={tacomaButton} setTacomaButton={setTacomaButton} vehicles={vehicles} trimsButton={trimsButton} setTrimsButton={setTrimsButton} modelsButton={modelsButton} setModelsButton={setModelsButton} setAvailableModels={setAvailableModels} availableModels={availableModels}/>
+    <Makes makes={vehicles.make} vehicles={vehicles} makesButton={makesButton} setMakesButton={setMakesButton}/>  
+    <Models makes={vehicles.model} priusButton={priusButton} setPriusButton={setPriusButton} fourRunnerButton={fourRunnerButton} setFourRunnerButton={setFourRunnerButton} tundraButton={tundraButton} setTundraButton={setTundraButton} tacomaButton={tacomaButton} setTacomaButton={setTacomaButton} vehicles={vehicles} makesButton={makesButton} setMakesButton={setMakesButton} availableModels={availableModels} setAvailableModels={setAvailableModels}/>
+    <Trims makes={vehicles.trim} priusButton={priusButton} setPriusButton={setPriusButton} tundraButton={tundraButton} setTundraButton={setTundraButton} fourRunnerButton={fourRunnerButton} setFourRunnerButton={setFourRunnerButton} tacomaButton={tacomaButton} setTacomaButton={setTacomaButton} vehicles={vehicles} trimsButton={trimsButton} setTrimsButton={setTrimsButton} modelsButton={modelsButton} setModelsButton={setModelsButton} setAvailableModels={setAvailableModels} availableModels={availableModels}/>
     <Colors makes={vehicles.color} vehicles={vehicles}/>
     <Years makes={vehicles.year} vehicles={vehicles}/>
       {/* {console.log('component tasks rendered')} */}

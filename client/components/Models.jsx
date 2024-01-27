@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 
-const Models = ({availableModels, setAvailableModels, tacomaButton, setTacomaButton, vehicles, makesButton}) => {
+const Models = ({availableModels, setAvailableModels, tacomaButton, setTacomaButton, setFourRunnerButton, fourRunnerButton, setPriusButton, priusButton, tundraButton, setTundraButton, vehicles, makesButton}) => {
     const [modelsButton, setModelsButton] = useState(false);
     
-    const [tundraButton, setTundraButton] = useState(false);
-    const [fourRunneraButton, setFourRunnerButton] = useState(false);
-    const [priusButton, setPriusButton] = useState(false);
+ 
+
     console.log('tacomaButton in Models?', tacomaButton);  // BUT IT BECOMES TRUE HERE... INTERESTING!
     const handleModelClick = (model) => {
         setAvailableModels(true);
