@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 
-const Colors = ({vehicles}) => {
+const Colors = ({vehicles, trimsButton}) => {
     const [colorsButton, setColorsButton] = useState(false);
 
     return (
-        { trimsButton ? (
+         trimsButton ? (
 <div id="colors">
     <button id="colorsButton" onClick={() => setColorsButton(true)}>
         Show Colors</button>
@@ -16,7 +16,7 @@ const Colors = ({vehicles}) => {
           </>
     ) : null}
 </div>
-    ) : null}
+    ) : null
 )};
 
 export default Colors;
