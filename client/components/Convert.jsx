@@ -81,3 +81,61 @@
     </div>
   )}
 </div>
+
+
+//Here
+import React, { useState } from 'react';
+
+const Trims = ({ setAvailableModels, handleModelClick, tacomaButton, tundraButton, fourRunnerButton, priusButton, availableModels, modelsButton, setModelsButton, vehicles, trimsButton, setTrimsButton }) => {
+  if (availableModels) {
+    return (
+      <div id="trims">
+        <button id="trimsButton" onClick={() => setTrimsButton(true)}>
+          Show Trims
+        </button>
+        {trimsButton && tacomaButton ? (
+          <div>
+            {vehicles.map((vehicle) => (
+              <span className="trim" key={vehicle.id}>
+                {`${vehicle.trim} Tacoma`}
+                {/* Avoid console.log in the render method */}
+              </span>
+            ))}
+          </div>
+        ) : null}
+      </div>
+    );
+  }
+};
+
+export default Trims;
+
+
+// Here
+import React, { useState } from 'react';
+
+const Trims = ({setAvailableModels, handleModelClick, tacomaButton, tundraButton, fourRunnerButton, priusButton, availableModels, modelsButton, setModelsButton, vehicles, trimsButton, setTrimsButton}) => {
+
+  if (availableModels) {
+    return (
+<div id="trims">
+  <button id="trimsButton" onClick={() => setTrimsButton(true)}>
+    Show Trims
+    </button>
+    {trimsButton && tacomaButton ? (
+      
+      <div>
+        {vehicles.map((vehicle) => (
+            <span className="trim" key={vehicle.id}>
+              {vehicle.trim} {'Tacoma'}
+              {console.log(vehicle.trim)}
+              {console.log(tacomaButton)}
+            </span>
+          ))}
+          </div>
+    ) : null}
+
+</div>
+)}}
+
+export default Trims;

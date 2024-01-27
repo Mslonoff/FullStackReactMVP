@@ -14,9 +14,10 @@ const App = () => {
   const [trimsButton, setTrimsButton] = useState(false);
   const [modelsButton, setModelsButton] = useState(false);
   const [availableModels, setAvailableModels] = useState(false);
+  // const [tacomaButton, setTacomaButton] = useState(false);
 
   useEffect(() => {
-    console.log('use Effect for vehicles ran');
+    // console.log('use Effect for vehicles ran');
     fetch("/api/vehicles") // changed from tasks - testing commit
       .then((res) => res.json())
       .then((vehicles) => {
@@ -35,7 +36,7 @@ const App = () => {
     <Trims makes={vehicles.trim} vehicles={vehicles} trimsButton={trimsButton} setTrimsButton={setTrimsButton} modelsButton={modelsButton} setModelsButton={setModelsButton} setAvailableModels={setAvailableModels} availableModels={availableModels}/>
     <Colors makes={vehicles.color} vehicles={vehicles}/>
     <Years makes={vehicles.year} vehicles={vehicles}/>
-      {console.log('component tasks rendered')}
+      {/* {console.log('component tasks rendered')} */}
     </>
   );
 };

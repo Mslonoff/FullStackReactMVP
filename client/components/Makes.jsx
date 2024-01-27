@@ -3,7 +3,7 @@ import React, { useState } from "react";
 
 const Makes = ({ vehicles, setMakesButton, makesButton }) => {
     // const [makesButton, setMakesButton] = useState(false);
-
+    console.log('makesButton?', makesButton);
     return (
       <div id="makes">
         <button id="makesButton"
@@ -22,5 +22,6 @@ const Makes = ({ vehicles, setMakesButton, makesButton }) => {
         ) : null}
       </div>
     );
+    console.log('makesButton?', makesButton);
 }
   export default Makes;
