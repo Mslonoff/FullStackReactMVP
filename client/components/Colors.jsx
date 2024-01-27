@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
-const Colors = ({vehicles, trimsButton}) => {
-    const [colorsButton, setColorsButton] = useState(false);
+const Colors = ({vehicles, trimsButton, colorsButton, setColorsButton}) => {
+    
 
     return (
          trimsButton ? (

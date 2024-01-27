@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 
-const Years = ({vehicles}) => {
-    const [yearsButton, setYearsButton] = useState(false);
+const Years = ({vehicles, colorsButton, setColorsButton, yearsButton, setYearsButton}) => {
+
 
     return (
+        colorsButton ? (
 <div id="years">
     <button id="yearsButton" onClick={() => setYearsButton(true)}>
         Show Years
@@ -16,6 +17,7 @@ const Years = ({vehicles}) => {
         </>
     ) : null}
 </div>
+    ) : null
 )};
 
 export default Years;
