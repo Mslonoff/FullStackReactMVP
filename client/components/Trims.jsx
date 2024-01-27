@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 
 const Trims = ({setAvailableModels, handleModelClick, tacomaButton, tundraButton, fourRunnerButton, setFourRunnerButton, priusButton, setPriusButton, availableModels, modelsButton, setModelsButton, vehicles, trimsButton, setTrimsButton}) => {
-  console.log('trimsButton in trims?', trimsButton);
-  console.log('fourRunnerButton in trims ------', fourRunnerButton);
+
   if (availableModels) {
     return (
 <div id="trims">
@@ -10,43 +9,105 @@ const Trims = ({setAvailableModels, handleModelClick, tacomaButton, tundraButton
     Show Trims
     </button>
     {trimsButton && tacomaButton ? (
-      <div>
-        {/* NOW HOW CAN WE MAKE THIS RETURN ONLY ONE OF EACH TRIM RATHER THAN ALL TRIMS */}
-        {vehicles.map((vehicle) => (
-            <span className="trim" key={vehicle.id}>
-              {vehicle.trim} {'Tacoma'}
-              {console.log(vehicle.trim)}
-            </span>
-          ))}
-          </div>
-    ) : null}
-     {trimsButton && tundraButton ? (
-      <div>
-        {vehicles.map((vehicle) => (
-            <span className="trim" key={vehicle.id}>
-              {vehicle.trim} {'Tundra'}
-            </span>
-          ))}
-          </div>
-    ) : null}
-         {trimsButton && fourRunnerButton ? (
-      <div>
-        {vehicles.map((vehicle) => (
-            <span className="trim" key={vehicle.id}>
-              {vehicle.trim} {'4Runner'}
-            </span>
-          ))}
-          </div>
-    ) : null}
-         {trimsButton && priusButton ? (
-      <div>
-        {vehicles.map((vehicle) => (
-            <span className="trim" key={vehicle.id}>
-              {vehicle.trim} {'Prius'}
-            </span>
-          ))}
-          </div>
-    ) : null}
+  <div>
+    {/* NOW HOW CAN WE MAKE THIS RETURN ONLY ONE OF EACH TRIM RATHER THAN ALL TRIMS */}
+    {(() => {
+      const uniqueTrims = new Set();
+      return vehicles
+        .filter((vehicle) => vehicle.model === 'Tacoma')
+        .map((vehicle) => {
+          if (!uniqueTrims.has(vehicle.trim)) {
+            uniqueTrims.add(vehicle.trim);
+            return (
+              <button
+                className="tacomaTrimButton"
+                key={vehicle.id}
+                onClick={() => handleTrimButtonClick(vehicle.trim)}
+              >
+                {vehicle.trim}
+              </button>
+            );
+          }
+          return null; // Return null for duplicates
+        });
+    })()}
+  </div>
+) : null}
+         {trimsButton && tundraButton ? (
+  <div>
+    {/* NOW HOW CAN WE MAKE THIS RETURN ONLY ONE OF EACH TRIM RATHER THAN ALL TRIMS */}
+    {(() => {
+      const uniqueTrims = new Set();
+      return vehicles
+        .filter((vehicle) => vehicle.model === 'Tundra')
+        .map((vehicle) => {
+          if (!uniqueTrims.has(vehicle.trim)) {
+            uniqueTrims.add(vehicle.trim);
+            return (
+              <button
+                className="tundraTrimButton"
+                key={vehicle.id}
+                onClick={() => handleTrimButtonClick(vehicle.trim)}
+              >
+                {vehicle.trim}
+              </button>
+            );
+          }
+          return null; // Return null for duplicates
+        });
+    })()}
+  </div>
+) : null}
+             {trimsButton && fourRunnerButton ? (
+  <div>
+    {/* NOW HOW CAN WE MAKE THIS RETURN ONLY ONE OF EACH TRIM RATHER THAN ALL TRIMS */}
+    {(() => {
+      const uniqueTrims = new Set();
+      return vehicles
+        .filter((vehicle) => vehicle.model === '4Runner')
+        .map((vehicle) => {
+          if (!uniqueTrims.has(vehicle.trim)) {
+            uniqueTrims.add(vehicle.trim);
+            return (
+              <button
+                className="fourRunnerTrimButton"
+                key={vehicle.id}
+                onClick={() => handleTrimButtonClick(vehicle.trim)}
+              >
+                {vehicle.trim}
+              </button>
+            );
+          }
+          return null; // Return null for duplicates
+        });
+    })()}
+  </div>
+) : null}
+             {trimsButton && priusButton ? (
+  <div>
+    {/* NOW HOW CAN WE MAKE THIS RETURN ONLY ONE OF EACH TRIM RATHER THAN ALL TRIMS */}
+    {(() => {
+      const uniqueTrims = new Set();
+      return vehicles
+        .filter((vehicle) => vehicle.model === 'Prius')
+        .map((vehicle) => {
+          if (!uniqueTrims.has(vehicle.trim)) {
+            uniqueTrims.add(vehicle.trim);
+            return (
+              <button
+                className="priusTrimButton"
+                key={vehicle.id}
+                onClick={() => handleTrimButtonClick(vehicle.trim)}
+              >
+                {vehicle.trim}
+              </button>
+            );
+          }
+          return null; // Return null for duplicates
+        });
+    })()}
+  </div>
+) : null}
 </div>
 )}}
 

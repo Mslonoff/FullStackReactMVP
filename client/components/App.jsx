@@ -6,8 +6,6 @@ import Trims from './Trims.jsx';
 import Colors from './Colors.jsx';
 import Years from './Years.jsx';
 
-
-
 const App = () => {
   const [vehicles, setVehicles] = useState([]);
   const [makesButton, setMakesButton] = useState(false);
@@ -22,13 +20,22 @@ const App = () => {
   const [yearsButton, setYearsButton] = useState(false);
 
   useEffect(() => {
-    // console.log('use Effect for vehicles ran');
+    console.log('use Effect for vehicles ran');
     fetch("/api/vehicles") // changed from tasks - testing commit
       .then((res) => res.json())
       .then((vehicles) => {
         setVehicles(vehicles);
       });
   }, []); 
+// to get trims only...
+  // useEffect(() => {
+  //   console.log('use Effect for vehicle trims ran')
+  //   fetch("/api/vehicles-by-make/:trims/") 
+  //     .then((res) => res.json())
+  //     .then((vehicles) => {
+  //       setVehicles(vehicles);
+  //     });
+  // }, []);
 // YOU CAN PASS STATE DOWN BUT NOT UP OR SIDEWAYS. 
 
   // useEffect(function, dependency array)

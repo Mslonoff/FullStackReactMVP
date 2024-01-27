@@ -50,9 +50,9 @@ app.get('/api/vehicles/:id', (req, res) => { // good to go
 });
 
 // get vehicle by trim
-app.get('/api/vehicles/:id/:trim', (req, res) => {
-  const { id, trim } = req.params;
-  client.query('SELECT * FROM vehicles WHERE id=$1', [trim])
+app.get('/api/vehicles-by-make/trims/:model', (req, res) => {
+  const { model } = req.params;
+  client.query('SELECT DISTINCT trim FROM vehicles WHERE model = $1', [model])
   .then((result) => {
     if (result.rows.length > 0) {
       res.send(result.rows)

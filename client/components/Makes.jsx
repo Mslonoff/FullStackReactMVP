@@ -3,7 +3,7 @@ import React, { useState } from "react";
 
 const Makes = ({ vehicles, setMakesButton, makesButton }) => {
     // const [makesButton, setMakesButton] = useState(false);
-    console.log('makesButton in makes?', makesButton);
+
     return (
       <div id="makes">
         <button id="makesButton"

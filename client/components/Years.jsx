@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 const Years = ({vehicles, colorsButton, setColorsButton, yearsButton, setYearsButton}) => {
 
-console.log('colorsButton in Years?', colorsButton);
+
     return (
         colorsButton ? (
 <div id="years">
