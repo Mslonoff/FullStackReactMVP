@@ -1,6 +1,15 @@
 import React, { useState } from 'react';
 
-const Years = ({vehicles, colorButton, setColorsButton, yearsButton, setYearsButton}) => {
+const Years = ({vehicles, setYearButton, yearButton, colorButton, setColorsButton, yearsButton, setYearsButton}) => {
+
+    const handleButtonClick = (year) => {
+        setYearButton(true);
+        handleYearButtonClick(year);
+      };
+
+      const handleYearButtonClick = (year) => {
+        console.log(`Year button clicked: ${year}`);
+      }
 
 
     return (
@@ -10,8 +19,10 @@ const Years = ({vehicles, colorButton, setColorsButton, yearsButton, setYearsBut
         Show Years</button>
     {yearsButton ? (
         <>
-        <button id="2023">2023</button>
-        <button id="2024">2024</button>
+        <button className="2023"onClick=
+        {() => handleButtonClick('2023')}>2023</button>
+        <button className="2024"onClick=
+        {() => handleButtonClick('2024')}>2024</button>
         </>
     ) : null}
 </div>

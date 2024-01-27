@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const Colors = ({vehicles, specificTrimButton, trimsButton, setColorButton, colorButton, colorsButton, setColorsButton}) => {
+const Colors = ({specificTrimButton, setColorButton, colorsButton, setColorsButton}) => {
 
     const handleButtonClick = (color) => {
         setColorButton(true);
