@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 
-const Colors = ({vehicles, trimsButton, colorsButton, setColorsButton}) => {
-    
+const Colors = ({vehicles, specificTrimButton, trimsButton, colorsButton, setColorsButton}) => {
 
     return (
-         trimsButton ? (
+        specificTrimButton ? (
 <div id="colors">
     <button id="colorsButton" onClick={() => setColorsButton(true)}>
         Show Colors</button>

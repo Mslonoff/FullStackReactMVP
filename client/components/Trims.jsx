@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 
-const Trims = ({setAvailableModels, tacomaTrimButton, setTacomaTrimButton, handleModelClick, tacomaButton, tundraButton, fourRunnerButton, setFourRunnerButton, priusButton, setPriusButton, availableModels, modelsButton, setModelsButton, vehicles, trimsButton, setTrimsButton}) => {
+const Trims = ({setAvailableModels, specificTrimButton, setSpecificTrimButton, handleModelClick, tacomaButton, tundraButton, fourRunnerButton, setFourRunnerButton, priusButton, setPriusButton, availableModels, modelsButton, setModelsButton, vehicles, trimsButton, setTrimsButton}) => {
 
 
   const handleButtonClick = (trim) => {
-    setTacomaTrimButton(true);
+    setSpecificTrimButton(true);
     handleTrimButtonClick(trim);
   };
 
@@ -121,6 +121,11 @@ const Trims = ({setAvailableModels, tacomaTrimButton, setTacomaTrimButton, handl
   </div>
 ) : null}
 </div>
-)}}
+)}
+
+// function setSpecificTrimButton() {
+//   if (priusTrimButton || fourRunnerTrimButton || tundraTrimButton || tacomaTrimButton)
+// }
+}
 
 export default Trims;

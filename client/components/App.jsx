@@ -18,7 +18,7 @@ const App = () => {
   const [priusButton, setPriusButton] = useState(false);
   const [colorsButton, setColorsButton] = useState(false);
   const [yearsButton, setYearsButton] = useState(false);
-  const [tacomaTrimButton, setTacomaTrimButton] = useState(false);
+  const [specificTrimButton, setSpecificTrimButton] = useState(false);
 
   useEffect(() => {
     console.log('use Effect for vehicles ran');
@@ -47,8 +47,8 @@ const App = () => {
     {/* <Vehicles vehicles={vehicles} a={1} /> */}
     <Makes makes={vehicles.make} vehicles={vehicles} makesButton={makesButton} setMakesButton={setMakesButton}/>  
     <Models makes={vehicles.model} priusButton={priusButton} setPriusButton={setPriusButton} fourRunnerButton={fourRunnerButton} setFourRunnerButton={setFourRunnerButton} tundraButton={tundraButton} setTundraButton={setTundraButton} tacomaButton={tacomaButton} setTacomaButton={setTacomaButton} vehicles={vehicles} makesButton={makesButton} setMakesButton={setMakesButton} availableModels={availableModels} setAvailableModels={setAvailableModels}/>
-    <Trims tacomaTrimButton={tacomaTrimButton} setTacomaTrimButton={setTacomaTrimButton} makes={vehicles.trim} tacomaTrimButton={tacomaTrimButton} setTacomaTrimButton={setTacomaTrimButton} priusButton={priusButton} setPriusButton={setPriusButton} tundraButton={tundraButton} setTundraButton={setTundraButton} fourRunnerButton={fourRunnerButton} setFourRunnerButton={setFourRunnerButton} tacomaButton={tacomaButton} setTacomaButton={setTacomaButton} vehicles={vehicles} trimsButton={trimsButton} setTrimsButton={setTrimsButton} modelsButton={modelsButton} setModelsButton={setModelsButton} setAvailableModels={setAvailableModels} availableModels={availableModels}/>
-    <Colors makes={vehicles.color} vehicles={vehicles} trimsButton={trimsButton} setTrimsButton={setTrimsButton} colorsButton={colorsButton} setColorsButton={setColorsButton} yearsButton={yearsButton} setYearsButton={setYearsButton}/>
+    <Trims specificTrimButton={specificTrimButton} setSpecificTrimButton={setSpecificTrimButton} makes={vehicles.trim} priusButton={priusButton} setPriusButton={setPriusButton} tundraButton={tundraButton} setTundraButton={setTundraButton} fourRunnerButton={fourRunnerButton} setFourRunnerButton={setFourRunnerButton} tacomaButton={tacomaButton} setTacomaButton={setTacomaButton} vehicles={vehicles} trimsButton={trimsButton} setTrimsButton={setTrimsButton} modelsButton={modelsButton} setModelsButton={setModelsButton} setAvailableModels={setAvailableModels} availableModels={availableModels}/>
+    <Colors specificTrimButton={specificTrimButton} makes={vehicles.color} vehicles={vehicles} trimsButton={trimsButton} setTrimsButton={setTrimsButton} colorsButton={colorsButton} setColorsButton={setColorsButton} yearsButton={yearsButton} setYearsButton={setYearsButton}/>
     <Years yearsButton={yearsButton} setYearsButton={setYearsButton} makes={vehicles.year} vehicles={vehicles} colorsButton={colorsButton} setColorsButton={setColorsButton}/>
       {/* {console.log('component tasks rendered')} */}
     </>
