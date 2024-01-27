@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 
 const Trims = ({setAvailableModels, handleModelClick, tacomaButton, tundraButton, fourRunnerButton, priusButton, availableModels, modelsButton, setModelsButton, vehicles, trimsButton, setTrimsButton}) => {
-  console.log('trimsButton?', trimsButton);
-  console.log('tacomaButton', tacomaButton); // TACOMA BUTTON IS UNDEFINED!!!! WHY????
+  console.log('trimsButton in trims?', trimsButton);
+  console.log('tacomaButton in trims ------', tacomaButton); // TACOMA BUTTON IS UNDEFINED!!!! WHY????
   if (availableModels) {
     return (
 <div id="trims">

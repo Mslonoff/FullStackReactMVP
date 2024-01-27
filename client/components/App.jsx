@@ -14,6 +14,7 @@ const App = () => {
   const [trimsButton, setTrimsButton] = useState(false);
   const [modelsButton, setModelsButton] = useState(false);
   const [availableModels, setAvailableModels] = useState(false);
+  const [tacomaButton, setTacomaButton] = useState(false);
   // const [tacomaButton, setTacomaButton] = useState(false);
 
   useEffect(() => {
@@ -24,16 +25,16 @@ const App = () => {
         setVehicles(vehicles);
       });
   }, []); 
-
+// YOU CAN PASS STATE DOWN BUT NOT UP OR SIDEWAYS. 
 
   // useEffect(function, dependency array)
 
   return (
     <>
     {/* <Vehicles vehicles={vehicles} a={1} /> */}
-    <Makes makes={vehicles.make} vehicles={vehicles} makesButton={makesButton} setMakesButton={setMakesButton}/>
-    <Models makes={vehicles.model} vehicles={vehicles} makesButton={makesButton} setMakesButton={setMakesButton} availableModels={availableModels} setAvailableModels={setAvailableModels}/>
-    <Trims makes={vehicles.trim} vehicles={vehicles} trimsButton={trimsButton} setTrimsButton={setTrimsButton} modelsButton={modelsButton} setModelsButton={setModelsButton} setAvailableModels={setAvailableModels} availableModels={availableModels}/>
+    <Makes makes={vehicles.make} vehicles={vehicles} makesButton={makesButton} setMakesButton={setMakesButton}/> // THIS IS PROP DRILLING; YOU NEVER DRILL UPWARD
+    <Models makes={vehicles.model} tacomaButton={tacomaButton} setTacomaButton={setTacomaButton} vehicles={vehicles} makesButton={makesButton} setMakesButton={setMakesButton} availableModels={availableModels} setAvailableModels={setAvailableModels}/>
+    <Trims makes={vehicles.trim} tacomaButton={tacomaButton} setTacomaButton={setTacomaButton} vehicles={vehicles} trimsButton={trimsButton} setTrimsButton={setTrimsButton} modelsButton={modelsButton} setModelsButton={setModelsButton} setAvailableModels={setAvailableModels} availableModels={availableModels}/>
     <Colors makes={vehicles.color} vehicles={vehicles}/>
     <Years makes={vehicles.year} vehicles={vehicles}/>
       {/* {console.log('component tasks rendered')} */}
