@@ -30,15 +30,7 @@ const App = () => {
         setVehicles(vehicles);
       });
   }, []); 
-// to get trims only...
-  // useEffect(() => {
-  //   console.log('use Effect for vehicle trims ran')
-  //   fetch("/api/vehicles-by-make/:trims/") 
-  //     .then((res) => res.json())
-  //     .then((vehicles) => {
-  //       setVehicles(vehicles);
-  //     });
-  // }, []);
+
 // YOU CAN PASS STATE DOWN BUT NOT UP OR SIDEWAYS. 
 
   // useEffect(function, dependency array)

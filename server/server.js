@@ -49,22 +49,25 @@ app.get('/api/vehicles/:id', (req, res) => { // good to go
   });
 });
 
+// post vehicle to userGarage table
+
+
 // get vehicle by trim
-app.get('/api/vehicles-by-make/trims/:model', (req, res) => {
-  const { model } = req.params;
-  client.query('SELECT DISTINCT trim FROM vehicles WHERE model = $1', [model])
-  .then((result) => {
-    if (result.rows.length > 0) {
-      res.send(result.rows)
-    } else {
-      res.status(404).send('Sorry cannot find vehicle trim');
-    }
-  })
-  .catch((error) => {
-    console.error(error);
-    res.status(500).send('Internal Server Error');
-  });
-});
+// app.get('/api/vehicles-by-make/trims/:model', (req, res) => {
+//   const { model } = req.params;
+//   client.query('SELECT DISTINCT trim FROM vehicles WHERE model = $1', [model])
+//   .then((result) => {
+//     if (result.rows.length > 0) {
+//       res.send(result.rows)
+//     } else {
+//       res.status(404).send('Sorry cannot find vehicle trim');
+//     }
+//   })
+//   .catch((error) => {
+//     console.error(error);
+//     res.status(500).send('Internal Server Error');
+//   });
+// });
 
 // build a post route
 
