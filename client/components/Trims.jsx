@@ -1,7 +1,19 @@
 import React, { useState } from 'react';
 
-const Trims = ({setAvailableModels, handleModelClick, tacomaButton, tundraButton, fourRunnerButton, setFourRunnerButton, priusButton, setPriusButton, availableModels, modelsButton, setModelsButton, vehicles, trimsButton, setTrimsButton}) => {
+const Trims = ({setAvailableModels, tacomaTrimButton, setTacomaTrimButton, handleModelClick, tacomaButton, tundraButton, fourRunnerButton, setFourRunnerButton, priusButton, setPriusButton, availableModels, modelsButton, setModelsButton, vehicles, trimsButton, setTrimsButton}) => {
 
+
+  const handleButtonClick = (trim) => {
+    setTacomaTrimButton(true);
+    handleTrimButtonClick(trim);
+  };
+
+  const handleTrimButtonClick = (trim) => {
+    // Implement the functionality for trim button click
+    console.log(`Trim button clicked: ${trim}`);
+  };
+
+  
   if (availableModels) {
     return (
 <div id="trims">
@@ -22,7 +34,7 @@ const Trims = ({setAvailableModels, handleModelClick, tacomaButton, tundraButton
               <button
                 className="tacomaTrimButton"
                 key={vehicle.id}
-                onClick={() => handleTrimButtonClick(vehicle.trim)}
+                onClick={() => handleButtonClick(vehicle.trim)}
               >
                 {vehicle.trim}
               </button>
@@ -47,7 +59,7 @@ const Trims = ({setAvailableModels, handleModelClick, tacomaButton, tundraButton
               <button
                 className="tundraTrimButton"
                 key={vehicle.id}
-                onClick={() => handleTrimButtonClick(vehicle.trim)}
+                onClick={() => handleButtonClick(vehicle.trim)}
               >
                 {vehicle.trim}
               </button>
@@ -72,7 +84,7 @@ const Trims = ({setAvailableModels, handleModelClick, tacomaButton, tundraButton
               <button
                 className="fourRunnerTrimButton"
                 key={vehicle.id}
-                onClick={() => handleTrimButtonClick(vehicle.trim)}
+                onClick={() => handleButtonClick(vehicle.trim)}
               >
                 {vehicle.trim}
               </button>
@@ -97,7 +109,7 @@ const Trims = ({setAvailableModels, handleModelClick, tacomaButton, tundraButton
               <button
                 className="priusTrimButton"
                 key={vehicle.id}
-                onClick={() => handleTrimButtonClick(vehicle.trim)}
+                onClick={() => handleButtonClick(vehicle.trim)}
               >
                 {vehicle.trim}
               </button>
