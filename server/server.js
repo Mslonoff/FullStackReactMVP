@@ -50,7 +50,25 @@ app.get('/api/vehicles/:id', (req, res) => { // good to go
 });
 
 // post vehicle to userGarage table
+app.post('/api/usergarage', (req, res) => { // good to go
+  let { make, model, trim, color, year } = req.body;
+  console.log(req.body);
+  let queryParams = [make, model, trim, color, year];
+  client.query('INSERT INTO usergarage (make, model, trim, color, year) VALUES($1, $2, $3, $4, $5)', queryParams)
+  .then((result) => res.send('New Vehicle Added to usergarage!'))
+  .catch((error) => {
+    console.error(error);
+    res.status(500).send('Internal Server Error');
+  });
+});
 
+// get all vehicles in usergarage
+app.get("/api/usergarage", (req, res) => { // good to go
+  client.query("SELECT * FROM usergarage").then((result) => {
+    console.log('hi there tasks executed');
+    res.send(result.rows);
+  });
+});
 
 // get vehicle by trim
 // app.get('/api/vehicles-by-make/trims/:model', (req, res) => {
