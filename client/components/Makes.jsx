@@ -8,16 +8,16 @@ const Makes = ({ vehicles }) => {
     return (
       <div id="makes">
         <button id="makesButton" onClick={() => setMakesButton(true)}>
-          Show Makes
+          Show Available Vehicle Makes
         </button>
   
         {makesButton ? (
           <div>
-            {vehicles.map((vehicle) => (
-              <span className="make" key={vehicle.id}>
-                {vehicle.make}
+            {/* {vehicles.map((vehicle) => ( */}
+              <span className="make" key={vehicles.id}>
+                {vehicles[0].make}
               </span>
-            ))}
+            {/* ))} */}
           </div>
         ) : null}
       </div>

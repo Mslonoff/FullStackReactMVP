@@ -25,7 +25,6 @@ const App = () => {
 
   return (
     <>
-    {/* How can I get all this down here to be a separate component called Vehicles.jsx?? */}
     {/* <Vehicles vehicles={vehicles} a={1} /> */}
     <Makes makes={vehicles.make} vehicles={vehicles}/>
     <Models makes={vehicles.model} vehicles={vehicles}/>
