@@ -2,14 +2,14 @@ import React, { useEffect, useState } from "react";
 // import Vehicles from './Vehicles.jsx';
 import Makes from './Makes.jsx';
 import Models from './Models.jsx';
+import Trims from './Trims.jsx';
 import Colors from './Colors.jsx';
 import Years from './Years.jsx';
-import Trims from './Trims.jsx';
+
 
 
 const App = () => {
   const [vehicles, setVehicles] = useState([]);
-
 
   useEffect(() => {
     console.log('use Effect for vehicles ran');
@@ -18,18 +18,21 @@ const App = () => {
       .then((vehicles) => {
         setVehicles(vehicles);
       });
-  }, []);
+  }, []); 
+
 
   // useEffect(function, dependency array)
 
   return (
     <>
-    <Makes vehicles={vehicles}/>
+    {/* How can I get all this down here to be a separate component called Vehicles.jsx?? */}
+    {/* <Vehicles vehicles={vehicles} a={1} /> */}
+    <Makes makes={vehicles.make} vehicles={vehicles}/>
+    <Models makes={vehicles.model} vehicles={vehicles}/>
+    <Trims makes={vehicles.trim} vehicles={vehicles}/>
+    <Colors makes={vehicles.color} vehicles={vehicles}/>
+    <Years makes={vehicles.year} vehicles={vehicles}/>
       {console.log('component tasks rendered')}
-      <Models vehicles={vehicles}/>
-      <Colors vehicles={vehicles}/>
-      <Years vehicles={vehicles}/>
-      <Trims vehicles={vehicles}/>
     </>
   );
 };

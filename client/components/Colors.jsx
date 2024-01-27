@@ -18,3 +18,7 @@ const Colors = ({vehicles}) => {
 )};
 
 export default Colors;
+
+// <form>
+//     <input type='radio' value={colors??}
+// </form>
