@@ -2,14 +2,12 @@ import React, { useState } from 'react';
 
 const Years = ({vehicles, colorsButton, setColorsButton, yearsButton, setYearsButton}) => {
 
-
+console.log('colorsButton in Years?', colorsButton);
     return (
         colorsButton ? (
 <div id="years">
     <button id="yearsButton" onClick={() => setYearsButton(true)}>
-        Show Years
-    </button>
-
+        Show Years</button>
     {yearsButton ? (
         <>
         <button id="2023">2023</button>

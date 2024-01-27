@@ -50,8 +50,8 @@ app.get('/api/vehicles/:id', (req, res) => { // good to go
 });
 
 // get vehicle by trim
-app.get('/api/vehicles/:trim', (req, res) => {
-  const { trim } = req.params;
+app.get('/api/vehicles/:id/:trim', (req, res) => {
+  const { id, trim } = req.params;
   client.query('SELECT * FROM vehicles WHERE id=$1', [trim])
   .then((result) => {
     if (result.rows.length > 0) {
