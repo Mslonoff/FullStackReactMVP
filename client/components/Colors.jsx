@@ -4,6 +4,7 @@ const Colors = ({vehicles}) => {
     const [colorsButton, setColorsButton] = useState(false);
 
     return (
+        { trimsButton ? (
 <div id="colors">
     <button id="colorsButton" onClick={() => setColorsButton(true)}>
         Show Colors</button>
@@ -15,6 +16,7 @@ const Colors = ({vehicles}) => {
           </>
     ) : null}
 </div>
+    ) : null}
 )};
 
 export default Colors;

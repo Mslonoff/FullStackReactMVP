@@ -11,11 +11,11 @@ const Trims = ({setAvailableModels, handleModelClick, tacomaButton, tundraButton
     </button>
     {trimsButton && tacomaButton ? (
       <div>
+        {/* NOW HOW CAN WE MAKE THIS RETURN ONLY ONE OF EACH TRIM RATHER THAN ALL TRIMS */}
         {vehicles.map((vehicle) => (
             <span className="trim" key={vehicle.id}>
               {vehicle.trim} {'Tacoma'}
               {console.log(vehicle.trim)}
-              {console.log(tacomaButton)}
             </span>
           ))}
           </div>

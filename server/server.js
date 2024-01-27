@@ -49,6 +49,23 @@ app.get('/api/vehicles/:id', (req, res) => { // good to go
   });
 });
 
+// get vehicle by trim
+app.get('/api/vehicles/:trim', (req, res) => {
+  const { trim } = req.params;
+  client.query('SELECT * FROM vehicles WHERE id=$1', [trim])
+  .then((result) => {
+    if (result.rows.length > 0) {
+      res.send(result.rows)
+    } else {
+      res.status(404).send('Sorry cannot find vehicle trim');
+    }
+  })
+  .catch((error) => {
+    console.error(error);
+    res.status(500).send('Internal Server Error');
+  });
+});
+
 // build a post route
 
 // ***************** routes that wil be needed ************
