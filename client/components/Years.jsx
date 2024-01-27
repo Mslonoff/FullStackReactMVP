@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 
-const Years = ({vehicles, colorsButton, setColorsButton, yearsButton, setYearsButton}) => {
+const Years = ({vehicles, colorButton, setColorsButton, yearsButton, setYearsButton}) => {
 
 
     return (
-        colorsButton ? (
+        colorButton ? (
 <div id="years">
     <button id="yearsButton" onClick={() => setYearsButton(true)}>
         Show Years</button>

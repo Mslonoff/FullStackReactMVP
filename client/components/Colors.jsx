@@ -1,6 +1,16 @@
 import React, { useState } from 'react';
 
-const Colors = ({vehicles, specificTrimButton, trimsButton, colorsButton, setColorsButton}) => {
+const Colors = ({vehicles, specificTrimButton, trimsButton, setColorButton, colorButton, colorsButton, setColorsButton}) => {
+
+    const handleButtonClick = (color) => {
+        setColorButton(true);
+        handleColorButtonClick(color);
+      };
+
+      const handleColorButtonClick = (color) => {
+        console.log(`Color button clicked: ${color}`);
+      }
+      
 
     return (
         specificTrimButton ? (
@@ -9,9 +19,12 @@ const Colors = ({vehicles, specificTrimButton, trimsButton, colorsButton, setCol
         Show Colors</button>
     {colorsButton ? (
         <>
-        <button id="Black">Black</button>
-        <button id="Gray">Gray</button>
-        <button id="Red">Red</button>
+        <button className="Black"
+        onClick={() => handleButtonClick('Black')}>Black</button>
+        <button className="Gray"
+        onClick={() => handleButtonClick('Gray')}>Gray</button>
+        <button className="Red"
+        onClick={() => handleButtonClick('Red')}>Red</button>
           </>
     ) : null}
 </div>
