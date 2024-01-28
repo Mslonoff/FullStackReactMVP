@@ -18,8 +18,11 @@ const Models = ({setAvailableModels, setSelectedModel, setTacomaButton, setFourR
                 {/* what if I make a separate models component for each model available? */}
                 <img className="tacomaImage" src="https://img-new.cgtrader.com/items/4722492/4130b8ba02/large/toyota-tacoma-2024-trd-pro-3d-model-4130b8ba02.jpg"></img>
             <button className="tacoma" onClick={() => {handleModelClick('Tacoma'); setTacomaButton(true);}}>Tacoma</button>
+            <img className="tacomaImage" src="https://img-new.cgtrader.com/items/4722492/4130b8ba02/large/toyota-tacoma-2024-trd-pro-3d-model-4130b8ba02.jpg"></img>
             <button className="tundra"onClick={() => {handleModelClick('Tundra'); setTundraButton(true);}}>Tundra</button>
+            <img className="tacomaImage" src="https://img-new.cgtrader.com/items/4722492/4130b8ba02/large/toyota-tacoma-2024-trd-pro-3d-model-4130b8ba02.jpg"></img>
             <button className="fourRunner"onClick={() => {handleModelClick('4Runner'); setFourRunnerButton(true);}}>4Runner</button>
+            <img className="tacomaImage" src="https://img-new.cgtrader.com/items/4722492/4130b8ba02/large/toyota-tacoma-2024-trd-pro-3d-model-4130b8ba02.jpg"></img>
             <button className="Prius"onClick={() => {handleModelClick('Prius'); setPriusButton(true);}}>Prius</button>
             </>
             ) : null}
