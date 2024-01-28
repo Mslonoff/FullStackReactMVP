@@ -64,7 +64,7 @@ priusTrimButton, fourRunnerTrimButton, .tundraTrimButton,
 
 } */
 
-#priusTrims, #tacomaTrims, #fourRunnerTrims, #tundraTrims, #colorOptions {
+#priusTrims, #tacomaTrims, #fourRunnerTrims, #tundraTrims, #colorOptions, #yearsOptions {
   display: flex;
   justify-content: space-around;
   
