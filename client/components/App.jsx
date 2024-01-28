@@ -10,6 +10,9 @@ import SelectedVehicle from "./SelectedVehicle.jsx";
 import heading from './heading.css';
 import buttons from './buttons.css';
 import images from './images.css';
+import span from './span.css';
+
+
 const App = () => {
   const [userGarage, setUserGarage] = useState([]);
   const [addVehicleButton, setAddVehicleButton] = useState(false);

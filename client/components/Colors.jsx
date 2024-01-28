@@ -20,14 +20,14 @@ const Colors = ({specificTrimButton, setSelectedColor, selectedColor, setColorBu
     <button className="colorsButton" onClick={() => setColorsButton(true)}>
         Show Colors</button>
     {colorsButton ? (
-        <>
+        <div>
         <button className="Black"
         onClick={() => handleButtonClick('Black')}>Black</button>
         <button className="Gray"
         onClick={() => handleButtonClick('Gray')}>Gray</button>
         <button className="Red"
         onClick={() => handleButtonClick('Red')}>Red</button>
-          </>
+          </div>
     ) : null}
 </div>
     ) : null

@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import SelectedVehicle from "./SelectedVehicle.jsx";
 
 const Makes = ({ vehicles, setMakesButton, makesButton }) => {
-    // const [makesButton, setMakesButton] = useState(false);
 
     return (
       <div id="makes">
@@ -16,7 +15,7 @@ const Makes = ({ vehicles, setMakesButton, makesButton }) => {
           <div>
             {/* {vehicles.map((vehicle) => ( */}
               <span className="make" key={vehicles.id}>
-                Toyota
+                TOYOTA
               </span>
           </div>
         ) : null}

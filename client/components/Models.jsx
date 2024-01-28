@@ -16,13 +16,13 @@ const Models = ({setAvailableModels, setSelectedModel, setTacomaButton, setFourR
             {modelsButton ? (
                 <>
                 {/* what if I make a separate models component for each model available? */}
-                <img className="tacomaImage" src="https://img-new.cgtrader.com/items/4722492/4130b8ba02/large/toyota-tacoma-2024-trd-pro-3d-model-4130b8ba02.jpg"></img>
+                <img className="tacomaImage" src="https://vehicle-images.dealerinspire.com/stock-images/chrome/0536f4bf3c9e392515d677f36aeba71c.png"></img>
             <button className="tacoma" onClick={() => {handleModelClick('Tacoma'); setTacomaButton(true);}}>Tacoma</button>
-            <img className="tacomaImage" src="https://img-new.cgtrader.com/items/4722492/4130b8ba02/large/toyota-tacoma-2024-trd-pro-3d-model-4130b8ba02.jpg"></img>
+            <img className="tundraImage" src="https://vehicle-images.dealerinspire.com/stock-images/chrome/d492cd3929e52ec6175f591f81c555c4.png"></img>
             <button className="tundra"onClick={() => {handleModelClick('Tundra'); setTundraButton(true);}}>Tundra</button>
-            <img className="tacomaImage" src="https://img-new.cgtrader.com/items/4722492/4130b8ba02/large/toyota-tacoma-2024-trd-pro-3d-model-4130b8ba02.jpg"></img>
+            <img className="fourRunner" src="https://vehicle-images.dealerinspire.com/stock-images/thumbnails/large/chrome/eeb5b84ca0559c97aa7651cc4699ef9b.png"></img>
             <button className="fourRunner"onClick={() => {handleModelClick('4Runner'); setFourRunnerButton(true);}}>4Runner</button>
-            <img className="tacomaImage" src="https://img-new.cgtrader.com/items/4722492/4130b8ba02/large/toyota-tacoma-2024-trd-pro-3d-model-4130b8ba02.jpg"></img>
+            <img className="tacomaImage" src="https://www.buyatoyota.com/assets/img/vehicle-info/Prius/2024/prius-hero-image.png"></img>
             <button className="Prius"onClick={() => {handleModelClick('Prius'); setPriusButton(true);}}>Prius</button>
             </>
             ) : null}
