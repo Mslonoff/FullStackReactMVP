@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import SelectedVehicle from "./SelectedVehicle.jsx";
 
 const Makes = ({ vehicles, setMakesButton, makesButton }) => {
     // const [makesButton, setMakesButton] = useState(false);

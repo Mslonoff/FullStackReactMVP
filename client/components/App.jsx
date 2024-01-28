@@ -6,6 +6,7 @@ import Trims from './Trims.jsx';
 import Colors from './Colors.jsx';
 import Years from './Years.jsx';
 import AddVehicle from './AddVehicle.jsx';
+import SelectedVehicle from "./SelectedVehicle.jsx";
 
 const App = () => {
   const [userGarage, setUserGarage] = useState([]);
@@ -24,6 +25,11 @@ const App = () => {
   const [yearsButton, setYearsButton] = useState(false);
   const [specificTrimButton, setSpecificTrimButton] = useState(false);
   const [colorButton, setColorButton] = useState(false);
+  //AddVehicleButtonStates...
+  const [selectedModel, setSelectedModel] = useState([]); // ['Tacoma']
+  const [selectedTrim, setSelectedTrim] = useState([]); // ['TRD Sport']
+  const [selectedColor, setSelectedColor] = useState([]); // ['Black']
+  const [selectedYear, setSelectedYear] = useState([]); // [2023]
 
   useEffect(() => {
     console.log('use Effect for userGarage ran');
@@ -58,6 +64,7 @@ const App = () => {
     <Colors colorButton={colorButton} setColorButton={setColorButton} specificTrimButton={specificTrimButton} makes={vehicles.color} vehicles={vehicles} trimsButton={trimsButton} setTrimsButton={setTrimsButton} colorsButton={colorsButton} setColorsButton={setColorsButton} yearsButton={yearsButton} setYearsButton={setYearsButton}/>
     <Years yearButton={yearButton} setYearButton={setYearButton} colorButton={colorButton} yearsButton={yearsButton} setYearsButton={setYearsButton} makes={vehicles.year} vehicles={vehicles} colorsButton={colorsButton} setColorsButton={setColorsButton}/>
     <AddVehicle  addVehicleButton={addVehicleButton} setAddVehicleButton={setAddVehicleButton} yearButton={yearButton}/>
+    <SelectedVehicle addVehicleButton={addVehicleButton} selectedModel={selectedModel} setSelectedModel={setSelectedModel} selectedTrim={selectedTrim} setSelectedTrim={setSelectedTrim} selectedColor={selectedColor} setSelectedColor={setSelectedColor} selectedYear={selectedYear} setSelectedYear={setSelectedYear}/>
       {/* {console.log('component tasks rendered')} */}
     </>
   );

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import SelectedVehicle from "./SelectedVehicle.jsx";
 
 const Trims = ({setAvailableModels, specificTrimButton, setSpecificTrimButton, handleModelClick, tacomaButton, tundraButton, fourRunnerButton, setFourRunnerButton, priusButton, setPriusButton, availableModels, modelsButton, setModelsButton, vehicles, trimsButton, setTrimsButton}) => {
 
