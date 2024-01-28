@@ -14,7 +14,7 @@ const Models = ({setAvailableModels, setSelectedModel, setTacomaButton, setFourR
     <div id="models">
         <button className="modelsButton" onClick={() => setModelsButton(true)}>Show Models</button>
             {modelsButton ? (
-                <>
+                <div>
                 {/* what if I make a separate models component for each model available? */}
                 <img className="tacomaImage" src="https://vehicle-images.dealerinspire.com/stock-images/chrome/0536f4bf3c9e392515d677f36aeba71c.png"></img>
             <button className="tacoma" onClick={() => {handleModelClick('Tacoma'); setTacomaButton(true);}}>Tacoma</button>
@@ -24,7 +24,7 @@ const Models = ({setAvailableModels, setSelectedModel, setTacomaButton, setFourR
             <button className="fourRunner"onClick={() => {handleModelClick('4Runner'); setFourRunnerButton(true);}}>4Runner</button>
             <img className="tacomaImage" src="https://www.buyatoyota.com/assets/img/vehicle-info/Prius/2024/prius-hero-image.png"></img>
             <button className="Prius"onClick={() => {handleModelClick('Prius'); setPriusButton(true);}}>Prius</button>
-            </>
+            </div>
             ) : null}
             </div>
     )}

@@ -7,10 +7,6 @@ import Colors from './Colors.jsx';
 import Years from './Years.jsx';
 import AddVehicle from './AddVehicle.jsx';
 import SelectedVehicle from "./SelectedVehicle.jsx";
-import heading from './heading.css';
-import buttons from './buttons.css';
-import images from './images.css';
-import span from './span.css';
 
 
 const App = () => {
