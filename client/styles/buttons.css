@@ -1,3 +1,7 @@
+.trimsButton, .colorsButton {
+  margin-left: 21.5em;
+}
+
 button {
   background-color: #317087;
   cursor: pointer;
@@ -53,3 +57,15 @@ button:after {
 .modelsButton, .tacoma, .tundra, .Prius,.fourRunner, 
 priusTrimButton, fourRunnerTrimButton, .tundraTrimButton, 
 .tacomaTrimButton, .trimsButton, .addVehicle */
+
+/* .priusTrimButton, fourRunnerTrimButton, .tundraTrimButton, 
+.tacomaTrimButton {
+  display: flex;
+
+} */
+
+#priusTrims, #tacomaTrims, #fourRunnerTrims, #tundraTrims, #colorOptions {
+  display: flex;
+  justify-content: space-around;
+  
+}

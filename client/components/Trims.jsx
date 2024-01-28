@@ -23,7 +23,7 @@ const Trims = ({setAvailableModels, setSelectedTrim, specificTrimButton, setSpec
     Show Trims
     </button>
     {trimsButton && tacomaButton ? (
-  <div>
+  <div id="tacomaTrims">
     {/* NOW HOW CAN WE MAKE THIS RETURN ONLY ONE OF EACH TRIM RATHER THAN ALL TRIMS */}
     {(() => {
       const uniqueTrims = new Set();
@@ -48,7 +48,7 @@ const Trims = ({setAvailableModels, setSelectedTrim, specificTrimButton, setSpec
   </div>
 ) : null}
          {trimsButton && tundraButton ? (
-  <div>
+  <div id="tundraTrims">
     {/* NOW HOW CAN WE MAKE THIS RETURN ONLY ONE OF EACH TRIM RATHER THAN ALL TRIMS */}
     {(() => {
       const uniqueTrims = new Set();
@@ -73,7 +73,7 @@ const Trims = ({setAvailableModels, setSelectedTrim, specificTrimButton, setSpec
   </div>
 ) : null}
              {trimsButton && fourRunnerButton ? (
-  <div>
+  <div id="fourRunnerTrims">
     {/* NOW HOW CAN WE MAKE THIS RETURN ONLY ONE OF EACH TRIM RATHER THAN ALL TRIMS */}
     {(() => {
       const uniqueTrims = new Set();
@@ -98,7 +98,7 @@ const Trims = ({setAvailableModels, setSelectedTrim, specificTrimButton, setSpec
   </div>
 ) : null}
              {trimsButton && priusButton ? (
-  <div>
+  <div id="priusTrims">
     {/* NOW HOW CAN WE MAKE THIS RETURN ONLY ONE OF EACH TRIM RATHER THAN ALL TRIMS */}
     {(() => {
       const uniqueTrims = new Set();

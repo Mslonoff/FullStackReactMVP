@@ -2,3 +2,8 @@
     background-color: bisque;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+
+div {
+    border: 4px solid black;
+    margin: 0.1rem;
+}
