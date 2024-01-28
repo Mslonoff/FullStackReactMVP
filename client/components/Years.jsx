@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import SelectedVehicle from "./SelectedVehicle.jsx";
 
-const Years = ({vehicles, setYearButton, yearButton, colorButton, setColorsButton, yearsButton, setYearsButton}) => {
+const Years = ({vehicles, setYearButton, setSelectedYear, yearButton, colorButton, setColorsButton, yearsButton, setYearsButton}) => {
 
     const handleButtonClick = (year) => {
         setYearButton(true);
+        setSelectedYear(year);
         handleYearButtonClick(year);
       };
 

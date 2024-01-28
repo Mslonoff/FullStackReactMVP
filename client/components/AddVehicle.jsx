@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import { completedVehicleSelection } from './SelectedVehicle';
-const AddVehicle = ({ yearButton, setAddVehicleButton }) => {
+const AddVehicle = ({ saveVehicle, yearButton, setAddVehicleButton }) => {
 
     const handleVehicleButtonClick = () => {
         setAddVehicleButton(true);
         completedVehicleSelection();
         console.log(`Vehicle Button Clicked`);
+        saveVehicle();
         
       };
 

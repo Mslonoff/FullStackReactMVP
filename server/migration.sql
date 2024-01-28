@@ -19,7 +19,7 @@ CREATE TABLE userGarage (
   color varchar(20),
   year integer,
   vehicle_id integer, -- NOT SURE HOW TO IMPLEMENT THIS ONE YET
-  FOREIGN KEY (vehicle_id) REFERENCES vehicles (id) ON DELETE CASCADE
+  FOREIGN KEY (ivehicle_d) REFERENCES vehicles (id) ON DELETE CASCADE
 );
 
 -- How do you make a vehicle picked by a customer get added to the userGarage?

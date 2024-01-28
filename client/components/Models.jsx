@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import SelectedVehicle from "./SelectedVehicle.jsx";
 
-const Models = ({setAvailableModels,setTacomaButton, setFourRunnerButton, setPriusButton, setTundraButton, makesButton}) => {
+const Models = ({setAvailableModels, setSelectedModel, setTacomaButton, setFourRunnerButton, setPriusButton, setTundraButton, makesButton}) => {
     const [modelsButton, setModelsButton] = useState(false);
     const handleModelClick = (model) => {
         setAvailableModels(true);
+        setSelectedModel(model);
+        console.log('model:', model);
 
     }
     if (makesButton) {

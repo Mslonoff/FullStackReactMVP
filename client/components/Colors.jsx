@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 
-const Colors = ({specificTrimButton, setColorButton, colorsButton, setColorsButton}) => {
+const Colors = ({specificTrimButton, setSelectedColor, selectedColor, setColorButton, colorsButton, setColorsButton}) => {
 
     const handleButtonClick = (color) => {
         setColorButton(true);
+        setSelectedColor(color);
         handleColorButtonClick(color);
+        console.log('selectedColor:', selectedColor);
       };
 
       const handleColorButtonClick = (color) => {

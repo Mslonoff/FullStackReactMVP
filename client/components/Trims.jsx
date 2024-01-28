@@ -1,17 +1,18 @@
 import React, { useState } from 'react';
 import SelectedVehicle from "./SelectedVehicle.jsx";
 
-const Trims = ({setAvailableModels, specificTrimButton, setSpecificTrimButton, handleModelClick, tacomaButton, tundraButton, fourRunnerButton, setFourRunnerButton, priusButton, setPriusButton, availableModels, modelsButton, setModelsButton, vehicles, trimsButton, setTrimsButton}) => {
+const Trims = ({setAvailableModels, setSelectedTrim, specificTrimButton, setSpecificTrimButton, handleModelClick, tacomaButton, tundraButton, fourRunnerButton, setFourRunnerButton, priusButton, setPriusButton, availableModels, modelsButton, setModelsButton, vehicles, trimsButton, setTrimsButton}) => {
 
 
   const handleButtonClick = (trim) => {
     setSpecificTrimButton(true);
+    setSelectedTrim(trim);
     handleTrimButtonClick(trim);
+    console.log('trim:', trim);
   };
 
   const handleTrimButtonClick = (trim) => {
     // Implement the functionality for trim button click
-    console.log(`Trim button clicked: ${trim}`);
   };
 
   
