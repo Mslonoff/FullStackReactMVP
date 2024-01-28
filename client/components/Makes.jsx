@@ -6,7 +6,7 @@ const Makes = ({ vehicles, setMakesButton, makesButton }) => {
 
     return (
       <div id="makes">
-        <button id="makesButton"
+        <button className="makesButton"
         onClick={() => {setMakesButton(true);
         }}>
           Show Available Vehicle Makes

@@ -17,13 +17,13 @@ const Years = ({vehicles, setYearButton, setSelectedYear, yearButton, colorButto
     return (
         colorButton ? (
 <div id="years">
-    <button id="yearsButton" onClick={() => setYearsButton(true)}>
+    <button className="yearsButton" onClick={() => setYearsButton(true)}>
         Show Years</button>
     {yearsButton ? (
         <>
-        <button className="2023"onClick=
+        <button className="first"onClick=
         {() => handleButtonClick('2023')}>2023</button>
-        <button className="2024"onClick=
+        <button className="second"onClick=
         {() => handleButtonClick('2024')}>2024</button>
         </>
     ) : null}

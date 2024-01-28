@@ -9,7 +9,7 @@ const SelectedVehicle = ({addVehicleButton, selectedModel, setSelectedModel, sel
     return (
         addVehicleButton ? (
             <div id="selectedVehicle">
-                <p>nothing</p>
+                <p>Vehicle Added to you Garage, Congratulations!</p>
             </div>
         ) : null
         

@@ -19,7 +19,7 @@ const Trims = ({setAvailableModels, setSelectedTrim, specificTrimButton, setSpec
   if (availableModels) {
     return (
 <div id="trims">
-  <button id="trimsButton" onClick={() => setTrimsButton(true)}>
+  <button className="trimsButton" onClick={() => setTrimsButton(true)}>
     Show Trims
     </button>
     {trimsButton && tacomaButton ? (

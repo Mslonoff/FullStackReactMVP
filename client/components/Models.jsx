@@ -12,14 +12,15 @@ const Models = ({setAvailableModels, setSelectedModel, setTacomaButton, setFourR
     if (makesButton) {
         return (
     <div id="models">
-        <button id="modelsButton" onClick={() => setModelsButton(true)}>Show Models</button>
+        <button className="modelsButton" onClick={() => setModelsButton(true)}>Show Models</button>
             {modelsButton ? (
                 <>
                 {/* what if I make a separate models component for each model available? */}
-            <button id="tacoma" onClick={() => {handleModelClick('Tacoma'); setTacomaButton(true);}}>Tacoma</button>
-            <button id="tundra"onClick={() => {handleModelClick('Tundra'); setTundraButton(true);}}>Tundra</button>
-            <button id="4Runner"onClick={() => {handleModelClick('4Runner'); setFourRunnerButton(true);}}>4Runner</button>
-            <button id="Prius"onClick={() => {handleModelClick('Prius'); setPriusButton(true);}}>Prius</button>
+                <img className="tacomaImage" src="https://img-new.cgtrader.com/items/4722492/4130b8ba02/large/toyota-tacoma-2024-trd-pro-3d-model-4130b8ba02.jpg"></img>
+            <button className="tacoma" onClick={() => {handleModelClick('Tacoma'); setTacomaButton(true);}}>Tacoma</button>
+            <button className="tundra"onClick={() => {handleModelClick('Tundra'); setTundraButton(true);}}>Tundra</button>
+            <button className="fourRunner"onClick={() => {handleModelClick('4Runner'); setFourRunnerButton(true);}}>4Runner</button>
+            <button className="Prius"onClick={() => {handleModelClick('Prius'); setPriusButton(true);}}>Prius</button>
             </>
             ) : null}
             </div>

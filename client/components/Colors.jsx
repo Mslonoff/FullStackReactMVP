@@ -17,7 +17,7 @@ const Colors = ({specificTrimButton, setSelectedColor, selectedColor, setColorBu
     return (
         specificTrimButton ? (
 <div id="colors">
-    <button id="colorsButton" onClick={() => setColorsButton(true)}>
+    <button className="colorsButton" onClick={() => setColorsButton(true)}>
         Show Colors</button>
     {colorsButton ? (
         <>
